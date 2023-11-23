@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>About <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1><%=shopName%> Stock List</h1>
+    <h2>A list of our books :</h2>
+    <!--    Iterating through newData-->
+    <ul>
+    <% for(let i = 0; i < availableBooks.length; i++) { %>
+    <li><%= availableBooks[i].name %>,  £<%= availableBooks[i].price %> </li>
+    <% } %>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1>Search Results</h1>
+
+    <!--    Iterating through newData-->
+    <ul>
+    <% if (availableBooks.length > 0) { %>
+        <li>You searched for :</li>
+        <% for(let i = 0; i < availableBooks.length; i++) { %>
+        <li><%= availableBooks[i].name %>,  £<%= availableBooks[i].price %> </li>
+    <% } %>
+    <% } %>
+    <% if (availableBooks.length = 0) { %>
+        <li>Sorry, no results for your search</li>
+    <% } %>
+    </ul>
+  </body>
+</html>
